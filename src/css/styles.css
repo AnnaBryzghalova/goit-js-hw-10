@@ -17,3 +17,7 @@
 .button:hover {
   background-color: #fd9;
 }
+
+.container {
+  margin: 36px auto 0 156px;
+}

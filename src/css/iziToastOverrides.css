@@ -1,0 +1,43 @@
+.iziToast > .iziToast-close {
+  background: url('../images/close.svg') no-repeat;
+  width: 16px;
+  height: 16px;
+  top: 22px;
+  right: 16px;
+}
+
+.iziToast > .iziToast-body .iziToast-title,
+.iziToast > .iziToast-body .iziToast-message {
+  font-family: 'Montserrat', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+
+.iziToast > .iziToast-body .iziToast-title {
+  font-weight: 700;
+}
+
+.iziToast.iziToast-color-red {
+  background-color: #ef4040;
+  border-color: #ffbebe;
+}
+
+.iziToast.iziToast-color-green {
+  background-color: #59a10d;
+  border-color: #b5ea7c;
+}
+
+/* #B51B1B #326101 */
+
+.iziToast > .iziToast-body .iziToast-icon.ico-error,
+.iziToast.iziToast-theme-dark .iziToast-icon.ico-error {
+  background: url('../images/error.svg') no-repeat;
+}
+
+.iziToast > .iziToast-body .iziToast-icon.ico-success,
+.iziToast.iziToast-theme-dark .iziToast-icon.ico-success {
+  background: url('../images/success.svg') no-repeat;
+}

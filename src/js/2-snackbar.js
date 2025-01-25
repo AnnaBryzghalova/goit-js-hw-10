@@ -1,37 +1,40 @@
-let formData = { email: '', message: '' };
-const form = document.querySelector('.feedback-form');
-const key = 'feedback-form-state';
-
-form.addEventListener('input', onFormInput);
+const form = document.querySelector('form.form');
 form.addEventListener('submit', onFormSubmit);
+form.state[0].checked = true;
 
-import * as ls from './local-storage-api';
-loadData();
-
-function loadData() {
-  const savedData = ls.getItem(key);
-  if (savedData !== null) {
-    formData = savedData;
-    form.elements.email.value = savedData.email;
-    form.elements.message.value = savedData.message;
-  }
-}
-
-function onFormInput(event) {
-  const input = event.target;
-  formData[input.name] = input.value;
-  ls.setItem(key, formData);
-}
+import { showError, showMessage } from './izi-toast-api';
 
 function onFormSubmit(event) {
   event.preventDefault();
-  if (formData.email === '' || formData.message === '') {
-    alert('Fill please all fields');
+
+  const ms = Number.parseInt(form.delay.value);
+  if (ms < 0) {
+    showError('Please enter a positive number');
+    form.delay.focus();
     return;
   }
 
-  console.log(formData);
-  formData = { email: '', message: '' };
-  form.reset();
-  localStorage.removeItem(key);
+  const fulfilled = form.state.value === 'fulfilled';
+  createPromise(ms, fulfilled)
+    .then(message => {
+      showMessage(message);
+    })
+    .catch(message => {
+      showError(message);
+    });
+
+  form.delay.value = '';
+  form.delay.focus();
+}
+
+function createPromise(ms, fulfilled) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (fulfilled) {
+        resolve(`Fulfilled promise in ${ms}ms`);
+      } else {
+        reject(`Rejected promise in ${ms}ms`);
+      }
+    }, ms);
+  });
 }

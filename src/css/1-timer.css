@@ -1,12 +1,8 @@
 @import 'styles.css';
 @import url('https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css');
 @import url('izitoast/dist/css/iziToast.min.css');
-@import url('./iziToast.css');
+@import url('./iziToastOverrides.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-#timer-container {
-  margin: 36px auto 0 156px;
-}
 
 #datetime-picker {
   border: 1px solid #808080;

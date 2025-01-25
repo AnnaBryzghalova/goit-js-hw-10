@@ -1,5 +1,5 @@
 import flatpickr from 'flatpickr';
-import iziToast from 'izitoast';
+import { showError } from './izi-toast-api';
 
 const fpOptions = {
   enableTime: true,
@@ -11,20 +11,7 @@ const fpOptions = {
     startButton.disabled = !isFutureDate;
 
     if (!isFutureDate) {
-      iziToast.error({
-        message: 'Please choose a date in the future',
-        position: 'topRight',
-        displayMode: 1, // once, replace
-        messageColor: '#fff',
-        backgroundColor: '#EF4040',
-        progressBarColor: '#b51b1b',
-        title: 'Error',
-        titleColor: '#fff',
-        titleSize: '16',
-        titleLineHeight: '150%',
-        pauseOnHover: true,
-        closeOnClick: true,
-      });
+      showError('Please choose a date in the future');
     }
   },
 };

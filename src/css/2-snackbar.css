@@ -1,75 +1,12 @@
 @import 'styles.css';
+@import url('izitoast/dist/css/iziToast.min.css');
+@import url('./iziToastOverrides.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-.feedback-form {
+.form {
   display: flex;
   flex-direction: column;
-  row-gap: 8px;
-  padding: 24px;
-  margin: 0 auto;
-  width: calc(360px + 48px);
-}
-
-.feedback-form input,
-.feedback-form textarea {
-  width: calc(360px - 32px);
-  font-size: 16px;
-  padding: 8px 16px;
-  outline: none;
-  font-family: 'Montserrat', serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.04em;
-  color: #2e2f42;
-}
-
-.feedback-form input {
-  height: calc(40px - 16px);
-  border: none;
-  background-image: url('data:image/svg+xml,<svg width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="359" height="39" rx="3.5" stroke="%23808080" /></svg>');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.feedback-form input:hover {
-  background-image: url('data:image/svg+xml,<svg width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="359" height="39" rx="3.5" stroke="black" /></svg>');
-}
-
-.feedback-form textarea {
-  height: 80px;
-  border-width: 1px;
-  border-radius: 8px;
-  border-color: #808080;
-}
-
-.feedback-form button {
-  border-radius: 8px;
-  padding: 8px 16px;
-  width: 95px;
-  height: 40px;
-  background-color: #4e75ff;
-  font-family: 'Montserrat', serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  color: #fff;
-  border: none;
-  transition: background-color 0.3s;
-}
-
-.feedback-form button:hover {
-  background-color: #6c8cff;
-}
-
-.feedback-form label {
-  font-family: 'Montserrat', serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.04em;
-  color: #2e2f42;
+  align-items: left;
+  width: 360px;
+  /* height: 100vh; */
 }

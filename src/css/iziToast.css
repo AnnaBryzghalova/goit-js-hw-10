@@ -1,0 +1,16 @@
+.iziToast > .iziToast-close {
+  background: url('../images/close.svg') no-repeat;
+  width: 16px;
+  height: 16px;
+  top: 18px;
+  right: 16px;
+}
+
+.iziToast.iziToast-color-red {
+  background-color: #ffbebe;
+}
+
+.iziToast > .iziToast-body .iziToast-icon.ico-error,
+.iziToast.iziToast-theme-dark .iziToast-icon.ico-error {
+  background: url('../images/error.svg') no-repeat;
+}

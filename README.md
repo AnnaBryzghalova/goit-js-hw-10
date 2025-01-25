@@ -1,3 +1,3 @@
-# Home Work #N
+# Home Work #10
 
-https://github.com/goitacademy/vanilla-app-template/blob/main/README.md
+Timer and Promises generator

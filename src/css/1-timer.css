@@ -1,7 +1,8 @@
 @import 'styles.css';
 @import url('https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css');
 @import url('izitoast/dist/css/iziToast.min.css');
-@import url('./iziToastOverrides.css');
+@import url('./izi-toast-overrides.css');
+@import url('./flatpickr-overrides.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 #datetime-picker {
@@ -30,59 +31,46 @@
   background-color: #fafafa;
 }
 
-#datetime-picker,
-button[data-start] {
+#datetime-picker {
   font-family: 'Montserrat', serif;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.04em;
-}
-
-button[data-start] {
-  border: none;
-  border-radius: 8px;
-  padding: 8px 16px;
-  width: 75px;
-  height: 40px;
-
-  font-weight: 500;
-  color: #fff;
-  background-color: #4e75ff;
-  transition: background-color 0.3s color 0.3s;
-}
-
-button[data-start]:hover {
-  background-color: #6c8cff;
-}
-
-button[data-start]:disabled {
-  color: #989898;
-  background-color: #cfcfcf;
 }
 
 .timer {
   margin-top: 32px;
 
   display: flex;
+  gap: 24px;
 
   font-family: 'Montserrat', serif;
   font-weight: 400;
-  font-size: 40px;
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
 
-.field {
+.timer .field {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+}
+
+.timer span.value,
+.timer span.label {
+  letter-spacing: 0.04em;
+  padding: none;
+  text-align: center;
 }
 
 .timer span.value {
   line-height: 120%;
   font-size: 40px;
+  height: 48px;
 }
 
 .timer span.label {
   font-size: 16px;
   line-height: 150%;
+  height: 24px;
 }

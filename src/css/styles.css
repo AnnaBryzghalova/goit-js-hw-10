@@ -21,3 +21,31 @@
 .container {
   margin: 36px auto 0 156px;
 }
+
+button {
+  font-family: 'Montserrat', serif;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  height: 40px;
+
+  font-weight: 500;
+  color: #fff;
+  background-color: #4e75ff;
+  transition: background-color 0.3s color 0.3s;
+}
+
+button:hover {
+  background-color: #6c8cff;
+}
+
+button:disabled {
+  color: #989898;
+  background-color: #cfcfcf;
+}
